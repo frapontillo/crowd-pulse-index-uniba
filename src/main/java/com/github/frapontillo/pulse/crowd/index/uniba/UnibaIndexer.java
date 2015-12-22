@@ -55,6 +55,10 @@ public class UnibaIndexer extends IPlugin<Message, Message, IndexParameters> {
         return PLUGIN_NAME;
     }
 
+    @Override public IPlugin<Message, Message, IndexParameters> getInstance() {
+        return new UnibaIndexer();
+    }
+
     @Override public IndexParameters getNewParameter() {
         return new IndexParameters();
     }
